@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns="http://javafx.com/javafx/8" spacing="10" xmlns:fx="http://javafx.com/fxml/1" minWidth="300" minHeight="75" fx:controller="Calculator.ui.mainView.TermDisplayController">
+	<children>
+		<Label fx:id="termLabel" text="0" />
+		<Label fx:id="resultLabel" text="0" />
+	</children>
+	
+	<padding>
+		<Insets top="10" bottom="10" left="20" right="5"/>
+	</padding>
+</VBox>

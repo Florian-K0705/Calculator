@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" hgap="17" vgap="15" fx:controller="Calculator.ui.mainView.KeyPadController">
+	<children>
+		<Button fx:id="number1" GridPane.rowIndex="0" GridPane.columnIndex="0" text="1" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number2" GridPane.rowIndex="0" GridPane.columnIndex="1" text="2" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number3" GridPane.rowIndex="0" GridPane.columnIndex="2" text="3" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number4" GridPane.rowIndex="1" GridPane.columnIndex="0" text="4" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number5" GridPane.rowIndex="1" GridPane.columnIndex="1" text="5" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number6" GridPane.rowIndex="1" GridPane.columnIndex="2" text="6" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number7" GridPane.rowIndex="2" GridPane.columnIndex="0" text="7" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number8" GridPane.rowIndex="2" GridPane.columnIndex="1" text="8" prefWidth="50" prefHeight="30" />
+		<Button fx:id="number9" GridPane.rowIndex="2" GridPane.columnIndex="2" text="9" prefWidth="50" prefHeight="30" />
+		<Button fx:id="add" GridPane.rowIndex="0" GridPane.columnIndex="3" text="+" prefWidth="50" prefHeight="30" />
+		<Button fx:id="sub" GridPane.rowIndex="0" GridPane.columnIndex="4" text="-" prefWidth="50" prefHeight="30" />
+		<Button fx:id="mul" GridPane.rowIndex="1" GridPane.columnIndex="3" text="x" prefWidth="50" prefHeight="30" />
+		<Button fx:id="div" GridPane.rowIndex="1" GridPane.columnIndex="4" text="/" prefWidth="50" prefHeight="30" />
+		<Button fx:id="openBracket" GridPane.rowIndex="2" GridPane.columnIndex="3" text="(" prefWidth="50" prefHeight="30" />
+		<Button fx:id="closedBracket" GridPane.rowIndex="2" GridPane.columnIndex="4" text=")" prefWidth="50" prefHeight="30" />
+		<Button fx:id="equal" GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.columnSpan="2" text="=" prefWidth="120" prefHeight="30" />
+		<Button fx:id="ce" GridPane.rowIndex="3" GridPane.columnIndex="0" text="CE" prefWidth="50" prefHeight="30" />
+	</children>
+	
+	<padding>
+		<Insets top="20" bottom="20" left="20" right="20"/>
+	</padding>
+</GridPane>
