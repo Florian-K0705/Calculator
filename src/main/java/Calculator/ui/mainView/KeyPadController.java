@@ -18,6 +18,8 @@ public class KeyPadController implements Initializable
 	private StringBuilder builder = new StringBuilder();
 	
 	@FXML
+	Button number0;
+	@FXML
 	Button number1;
 	@FXML
 	Button number2;
@@ -51,12 +53,13 @@ public class KeyPadController implements Initializable
 	Button equal;
 	@FXML
 	Button ce;
+	@FXML
+	Button dot;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
-		termStringProperty.setValue("0");
-		
+		number0.setOnAction(value -> {builder.append("0"); termStringProperty.setValue(builder.toString());});
 		number1.setOnAction(value -> {builder.append("1"); termStringProperty.setValue(builder.toString());});
 		number2.setOnAction(value -> {builder.append("2"); termStringProperty.setValue(builder.toString());});
 		number3.setOnAction(value -> {builder.append("3"); termStringProperty.setValue(builder.toString());});
@@ -77,6 +80,7 @@ public class KeyPadController implements Initializable
 		
 		ce.setOnAction(value -> {builder.delete(0, builder.length()); termStringProperty.setValue("0");});
 		equal.setOnAction(value -> {resultStringProperty.setValue(new ReversePolishNotationCalculator(builder.toString()).getResult());});
+		dot.setOnAction(value -> {builder.append("."); termStringProperty.setValue(builder.toString());});
 	}
 
 	

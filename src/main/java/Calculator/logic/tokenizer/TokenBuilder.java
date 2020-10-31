@@ -17,7 +17,7 @@ public class TokenBuilder
 		{
 			tmp = s.charAt(i);
 			
-			if (Character.isDigit(tmp))
+			if (Character.isDigit(tmp) || tmp=='.')
 			{
 				builder.append(tmp);
 			}
