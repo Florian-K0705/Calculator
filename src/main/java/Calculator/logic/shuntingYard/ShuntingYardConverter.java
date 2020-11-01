@@ -10,7 +10,7 @@ public class ShuntingYardConverter
 {
 	private List<Token> tokenQueue = new ArrayList<>();
 	
-	public ShuntingYardConverter(List<Token> tokenList)
+	public ShuntingYardConverter(List<Token> tokenList) throws Exception
 	{
 		Stack<Token> stack = new Stack<>();
 		
@@ -72,12 +72,14 @@ public class ShuntingYardConverter
 			
 			if (t.isClosedBracket())
 			{
-				//TODO Wenn der schließenden Klammer keine öffnene voran steht!! Fehlerfall hinzufügen
 				
 				while (!stack.lastElement().isOpenBracket() && !stack.isEmpty())
 				{
 					tokenQueue.add(stack.pop());
 				}
+				
+				if (stack.isEmpty())
+					throw new Exception("Missing open Bracket");
 				
 				stack.pop();
 			}
@@ -85,7 +87,9 @@ public class ShuntingYardConverter
 		
 		while (!stack.isEmpty())
 		{
-			//TODO Fehlerfall wenn auf dem Stack eine öffnende klammer auftaucht.
+			if (stack.lastElement().isOpenBracket())
+				throw new Exception();
+			
 			tokenQueue.add(stack.pop());
 		}
 	}

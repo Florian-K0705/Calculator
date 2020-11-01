@@ -79,7 +79,17 @@ public class KeyPadController implements Initializable
 		closedBracket.setOnAction(value -> {builder.append(")"); termStringProperty.setValue(builder.toString());});
 		
 		ce.setOnAction(value -> {builder.delete(0, builder.length()); termStringProperty.setValue("0");});
-		equal.setOnAction(value -> {resultStringProperty.setValue(new ReversePolishNotationCalculator(builder.toString()).getResult());});
+		equal.setOnAction(value -> 
+		{
+			try 
+			{
+				resultStringProperty.setValue(new ReversePolishNotationCalculator(builder.toString()).getResult());
+			}
+			catch (Exception t)
+			{
+				resultStringProperty.setValue("Syntax Error");
+			}
+		});
 		dot.setOnAction(value -> {builder.append("."); termStringProperty.setValue(builder.toString());});
 	}
 

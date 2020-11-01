@@ -12,7 +12,7 @@ public class ReversePolishNotationCalculator
 {
 	private double result = 0;
 	
-	public ReversePolishNotationCalculator(String s)
+	public ReversePolishNotationCalculator(String s) throws Exception
 	{
 		TokenBuilder tokenBuilder = new TokenBuilder(s);
 		ShuntingYardConverter converter = 
