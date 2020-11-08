@@ -33,7 +33,7 @@ public class ShuntingYardConverter
 					op_t = (Operator) t;
 					op_stack = (Operator) stack.lastElement();
 					
-					if (op_t.isLeftAssociative() && (op_stack.getPrecedence() > op_t.getPrecedence()))
+					if (op_t.isLeftAssociative() && (op_stack.getPrecedence() >= op_t.getPrecedence()))
 					{
 						loopCondition = true;
 					}
