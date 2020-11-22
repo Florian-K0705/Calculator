@@ -34,5 +34,10 @@ public class Bracket implements Token
 	public boolean isClosedBracket() {
 		return !isOpenBracket();
 	}
+
+	@Override
+	public boolean isFunction() {
+		return false;
+	}
 	
 }

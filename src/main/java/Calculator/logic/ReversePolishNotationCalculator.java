@@ -38,6 +38,19 @@ public class ReversePolishNotationCalculator
 				stack.push(t);
 			}
 			
+			if (t.isFunction())
+			{
+				nt = new NumberToken();
+				
+				tmp1 =  Double.parseDouble(stack.pop().getValue());
+				
+				if (t.getValue().equals("\u221A"))
+					nt.setValue(String.valueOf(Math.sqrt(tmp1)));
+				
+				
+				stack.push(nt);
+			}
+			
 			if (t.isOperator())
 			{
 				tmp1 = Double.parseDouble(stack.pop().getValue());
@@ -70,6 +83,7 @@ public class ReversePolishNotationCalculator
 				}
 			}
 		}
+		
 		
 		result = Double.parseDouble(stack.pop().getValue());
 		

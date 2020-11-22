@@ -14,4 +14,6 @@ public interface Token
 	
 	boolean isClosedBracket();
 	
+	boolean isFunction();
+	
 }

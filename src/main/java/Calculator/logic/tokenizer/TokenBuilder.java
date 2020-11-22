@@ -52,6 +52,13 @@ public class TokenBuilder
 					tmpToken.setValue(String.valueOf(tmp));
 					tokenList.add(tmpToken);
 				}
+				
+				if (tmp == '\u221A')
+				{
+					tmpToken = new Function();
+					tmpToken.setValue(String.valueOf(tmp));
+					tokenList.add(tmpToken);
+				}
 			}
 		}
 		

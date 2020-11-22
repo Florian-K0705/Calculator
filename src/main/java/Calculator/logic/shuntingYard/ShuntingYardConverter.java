@@ -16,10 +16,14 @@ public class ShuntingYardConverter
 		
 		for (Token t : tokenList)
 		{
-			
 			if (t.isNumber())
 			{
 				tokenQueue.add(t);
+			}
+			
+			if (t.isFunction())
+			{
+				stack.add(t);
 			}
 			
 			if (t.isOperator())
@@ -82,6 +86,10 @@ public class ShuntingYardConverter
 					throw new Exception("Missing open Bracket");
 				
 				stack.pop();
+				
+				if (stack.firstElement().isFunction())
+					tokenQueue.add(stack.pop());
+				
 			}
 		}
 		

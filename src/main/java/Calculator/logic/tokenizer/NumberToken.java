@@ -36,5 +36,10 @@ public class NumberToken implements Token
 		return false;
 	}
 
+	@Override
+	public boolean isFunction() {
+		return false;
+	}
+
 
 }

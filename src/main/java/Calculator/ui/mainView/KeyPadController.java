@@ -1,6 +1,7 @@
 package Calculator.ui.mainView;
 
 import java.net.URL;
+import java.text.Normalizer;
 import java.util.ResourceBundle;
 
 import Calculator.logic.ReversePolishNotationCalculator;
@@ -46,6 +47,8 @@ public class KeyPadController implements Initializable
 	@FXML
 	Button div;
 	@FXML
+	Button sqrt;
+	@FXML
 	Button openBracket;
 	@FXML
 	Button closedBracket;
@@ -56,6 +59,10 @@ public class KeyPadController implements Initializable
 	@FXML
 	Button dot;
 
+	
+	// Das Wurzelsymbol in Unicode ist \u221A
+	
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
@@ -75,6 +82,8 @@ public class KeyPadController implements Initializable
 		mul.setOnAction(value -> {builder.append("*"); termStringProperty.setValue(builder.toString());});
 		div.setOnAction(value -> {builder.append("/"); termStringProperty.setValue(builder.toString());});
 		
+		sqrt.setOnAction(value -> {builder.append("\u221A("); termStringProperty.setValue(builder.toString());});
+		
 		openBracket.setOnAction(value -> {builder.append("("); termStringProperty.setValue(builder.toString());});
 		closedBracket.setOnAction(value -> {builder.append(")"); termStringProperty.setValue(builder.toString());});
 		
@@ -88,6 +97,7 @@ public class KeyPadController implements Initializable
 			catch (Exception t)
 			{
 				resultStringProperty.setValue("Syntax Error");
+				t.printStackTrace();
 			}
 		});
 		dot.setOnAction(value -> {builder.append("."); termStringProperty.setValue(builder.toString());});

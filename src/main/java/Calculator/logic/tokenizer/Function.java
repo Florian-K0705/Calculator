@@ -1,27 +1,9 @@
 package Calculator.logic.tokenizer;
 
-public class Operator implements Token
-{
+public class Function implements Token {
 
+	
 	private String value = "";
-	
-	public boolean isLeftAssociative()
-	{
-		return value.equals("+") || value.equals("-") || 
-							value.equals("*") || value.equals("/");
-	}
-	
-	public int getPrecedence()
-	{
-		if (value.equals("+") || value.equals("-"))
-		{
-			return 0;
-		}
-		else
-		{
-			return 1;
-		}
-	}
 	
 	@Override
 	public String getValue() {
@@ -40,7 +22,7 @@ public class Operator implements Token
 
 	@Override
 	public boolean isOperator() {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -55,7 +37,7 @@ public class Operator implements Token
 
 	@Override
 	public boolean isFunction() {
-		return false;
+		return true;
 	}
 
 }
