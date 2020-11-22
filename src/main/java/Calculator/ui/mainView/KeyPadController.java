@@ -58,9 +58,8 @@ public class KeyPadController implements Initializable
 	Button ce;
 	@FXML
 	Button dot;
-
-	
-	// Das Wurzelsymbol in Unicode ist \u221A
+	@FXML
+	Button power;
 	
 	
 	@Override
@@ -83,6 +82,7 @@ public class KeyPadController implements Initializable
 		div.setOnAction(value -> {builder.append("/"); termStringProperty.setValue(builder.toString());});
 		
 		sqrt.setOnAction(value -> {builder.append("\u221A("); termStringProperty.setValue(builder.toString());});
+		power.setOnAction(value -> {builder.append("^"); termStringProperty.setValue(builder.toString());});
 		
 		openBracket.setOnAction(value -> {builder.append("("); termStringProperty.setValue(builder.toString());});
 		closedBracket.setOnAction(value -> {builder.append(")"); termStringProperty.setValue(builder.toString());});

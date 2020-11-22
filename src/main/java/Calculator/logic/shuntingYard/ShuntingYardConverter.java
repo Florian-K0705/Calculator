@@ -87,7 +87,7 @@ public class ShuntingYardConverter
 				
 				stack.pop();
 				
-				if (stack.firstElement().isFunction())
+				if (!stack.isEmpty() && stack.firstElement().isFunction())
 					tokenQueue.add(stack.pop());
 				
 			}

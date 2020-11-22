@@ -7,8 +7,11 @@ public class Operator implements Token
 	
 	public boolean isLeftAssociative()
 	{
-		return value.equals("+") || value.equals("-") || 
-							value.equals("*") || value.equals("/");
+		if (value.equals("^"))
+			return false;
+		
+		if (value.equals("+") || value.equals("-") || value.equals("*") || value.equals("/"));
+			return true;
 	}
 	
 	public int getPrecedence()
@@ -17,10 +20,12 @@ public class Operator implements Token
 		{
 			return 0;
 		}
-		else
+		else if (value.equals("*") || value.equals("/"))
 		{
 			return 1;
 		}
+		else
+			return 2;
 	}
 	
 	@Override

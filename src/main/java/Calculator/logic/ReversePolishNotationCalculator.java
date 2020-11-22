@@ -81,6 +81,12 @@ public class ReversePolishNotationCalculator
 					nt.setValue(String.valueOf( (double)(tmp2 / tmp1) ));
 					stack.push(nt);
 				}
+				
+				if (t.getValue().equals("^"))
+				{
+					nt.setValue(String.valueOf( (double)(Math.pow(tmp2, tmp1)) ));
+					stack.push(nt);
+				}
 			}
 		}
 		

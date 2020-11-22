@@ -22,6 +22,7 @@
 		<Button fx:id="mul" GridPane.rowIndex="1" GridPane.columnIndex="3" text="×" prefWidth="50" prefHeight="30" />
 		<Button fx:id="div" GridPane.rowIndex="1" GridPane.columnIndex="4" text="/" prefWidth="50" prefHeight="30" />
 		<Button fx:id="sqrt" GridPane.rowIndex="0" GridPane.columnIndex="5" text="√" prefWidth="50" prefHeight="30" />
+		<Button fx:id="power" GridPane.rowIndex="1" GridPane.columnIndex="5" text="^" prefWidth="50" prefHeight="30" />
 		<Button fx:id="openBracket" GridPane.rowIndex="2" GridPane.columnIndex="3" text="(" prefWidth="50" prefHeight="30" />
 		<Button fx:id="closedBracket" GridPane.rowIndex="2" GridPane.columnIndex="4" text=")" prefWidth="50" prefHeight="30" />
 		<Button fx:id="equal" GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.columnSpan="2" text="=" prefWidth="120" prefHeight="30" />

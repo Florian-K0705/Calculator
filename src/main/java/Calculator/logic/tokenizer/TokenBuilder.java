@@ -59,6 +59,13 @@ public class TokenBuilder
 					tmpToken.setValue(String.valueOf(tmp));
 					tokenList.add(tmpToken);
 				}
+				
+				if (tmp == '^')
+				{
+					tmpToken = new Operator();
+					tmpToken.setValue(String.valueOf(tmp));
+					tokenList.add(tmpToken);
+				}
 			}
 		}
 		
