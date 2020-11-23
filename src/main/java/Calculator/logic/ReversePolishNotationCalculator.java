@@ -46,7 +46,12 @@ public class ReversePolishNotationCalculator
 				
 				if (t.getValue().equals("\u221A"))
 					nt.setValue(String.valueOf(Math.sqrt(tmp1)));
-				
+				else if (t.getValue().equals("sin"))
+					nt.setValue(String.valueOf(Math.sin(tmp1)));
+				else if (t.getValue().equals("cos"))
+					nt.setValue(String.valueOf(Math.cos(tmp1)));
+				else if (t.getValue().equals("tan"))
+					nt.setValue(String.valueOf(Math.tan(tmp1)));
 				
 				stack.push(nt);
 			}

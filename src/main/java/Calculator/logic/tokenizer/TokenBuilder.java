@@ -32,6 +32,28 @@ public class TokenBuilder
 					builder.delete(0, builder.length());
 				}
 				
+				if (i+3 < s.length())
+				{
+					if (s.substring(i, i+3).equals("sin"))
+					{
+						tmpToken = new Function();
+						tmpToken.setValue(String.valueOf("sin"));
+						tokenList.add(tmpToken);
+					}
+					else if (s.substring(i, i+3).equals("cos"))
+					{
+						tmpToken = new Function();
+						tmpToken.setValue(String.valueOf("cos"));
+						tokenList.add(tmpToken);
+					}
+					else if (s.substring(i, i+3).equals("tan"))
+					{
+						tmpToken = new Function();
+						tmpToken.setValue(String.valueOf("tan"));
+						tokenList.add(tmpToken);
+					}
+				}
+				
 				if (tmp == '(')
 				{
 					tmpToken = new Bracket();

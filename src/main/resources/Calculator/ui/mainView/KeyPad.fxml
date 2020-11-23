@@ -24,6 +24,9 @@
 		<Button fx:id="div" GridPane.rowIndex="1" GridPane.columnIndex="4" text="/" prefWidth="50" prefHeight="30" />
 		<Button fx:id="sqrt" GridPane.rowIndex="0" GridPane.columnIndex="5" text="√" prefWidth="50" prefHeight="30" />
 		<Button fx:id="power" GridPane.rowIndex="1" GridPane.columnIndex="5" text="^" prefWidth="50" prefHeight="30" />
+		<Button fx:id="sin" GridPane.rowIndex="0" GridPane.columnIndex="6" text="sin" prefWidth="50" prefHeight="30" />
+		<Button fx:id="cos" GridPane.rowIndex="1" GridPane.columnIndex="6" text="cos" prefWidth="50" prefHeight="30" />
+		<Button fx:id="tan" GridPane.rowIndex="2" GridPane.columnIndex="6" text="tan" prefWidth="50" prefHeight="30" />
 		
 		<Button fx:id="openBracket" GridPane.rowIndex="2" GridPane.columnIndex="3" text="(" prefWidth="50" prefHeight="30" />
 		<Button fx:id="closedBracket" GridPane.rowIndex="2" GridPane.columnIndex="4" text=")" prefWidth="50" prefHeight="30" />

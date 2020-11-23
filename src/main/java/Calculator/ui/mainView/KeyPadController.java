@@ -48,6 +48,12 @@ public class KeyPadController implements Initializable
 	@FXML
 	Button sqrt;
 	@FXML
+	Button sin;
+	@FXML
+	Button cos;
+	@FXML
+	Button tan;
+	@FXML
 	Button openBracket;
 	@FXML
 	Button closedBracket;
@@ -86,6 +92,9 @@ public class KeyPadController implements Initializable
 		
 		sqrt.setOnAction(value -> {builder.append("\u221A("); termStringProperty.setValue(builder.toString());});
 		power.setOnAction(value -> {builder.append("^"); termStringProperty.setValue(builder.toString());});
+		sin.setOnAction(value -> {builder.append("sin("); termStringProperty.setValue(builder.toString());});
+		cos.setOnAction(value -> {builder.append("cos("); termStringProperty.setValue(builder.toString());});
+		tan.setOnAction(value -> {builder.append("tan("); termStringProperty.setValue(builder.toString());});
 		
 		openBracket.setOnAction(value -> {builder.append("("); termStringProperty.setValue(builder.toString());});
 		closedBracket.setOnAction(value -> {builder.append(")"); termStringProperty.setValue(builder.toString());});
