@@ -46,6 +46,20 @@ public class TokenBuilder
 					tokenList.add(tmpToken);
 				}
 				
+				if (tmp == 'e')
+				{
+					tmpToken = new NumberToken();
+					tmpToken.setValue(String.valueOf(Math.E));
+					tokenList.add(tmpToken);
+				}
+				
+				if (tmp == '\u03C0')
+				{
+					tmpToken = new NumberToken();
+					tmpToken.setValue(String.valueOf(Math.PI));
+					tokenList.add(tmpToken);
+				}
+				
 				if ((tmp == '+') || (tmp == '-') || (tmp == '*') || (tmp == '/'))
 				{
 					tmpToken = new Operator();

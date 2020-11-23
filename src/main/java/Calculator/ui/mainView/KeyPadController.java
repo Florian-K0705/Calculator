@@ -1,7 +1,6 @@
 package Calculator.ui.mainView;
 
 import java.net.URL;
-import java.text.Normalizer;
 import java.util.ResourceBundle;
 
 import Calculator.logic.ReversePolishNotationCalculator;
@@ -53,6 +52,10 @@ public class KeyPadController implements Initializable
 	@FXML
 	Button closedBracket;
 	@FXML
+	Button euler;
+	@FXML
+	Button pi;
+	@FXML
 	Button equal;
 	@FXML
 	Button ce;
@@ -86,6 +89,9 @@ public class KeyPadController implements Initializable
 		
 		openBracket.setOnAction(value -> {builder.append("("); termStringProperty.setValue(builder.toString());});
 		closedBracket.setOnAction(value -> {builder.append(")"); termStringProperty.setValue(builder.toString());});
+		
+		euler.setOnAction(value -> {builder.append("e"); termStringProperty.setValue(builder.toString());});
+		pi.setOnAction(value -> {builder.append("\u03C0"); termStringProperty.setValue(builder.toString());});
 		
 		ce.setOnAction(value -> {builder.delete(0, builder.length()); termStringProperty.setValue("0");});
 		equal.setOnAction(value -> 
