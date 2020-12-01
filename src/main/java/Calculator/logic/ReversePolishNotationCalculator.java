@@ -52,6 +52,10 @@ public class ReversePolishNotationCalculator
 					nt.setValue(String.valueOf(Math.cos(tmp1)));
 				else if (t.getValue().equals("tan"))
 					nt.setValue(String.valueOf(Math.tan(tmp1)));
+				else if (t.getValue().equals("ln"))
+					nt.setValue(String.valueOf(Math.log(tmp1)));
+				else if (t.getValue().equals("lg"))
+					nt.setValue(String.valueOf(Math.log10(tmp1)));
 				
 				stack.push(nt);
 			}

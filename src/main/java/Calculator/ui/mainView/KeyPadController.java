@@ -54,6 +54,10 @@ public class KeyPadController implements Initializable
 	@FXML
 	Button tan;
 	@FXML
+	Button log10;
+	@FXML
+	Button logE;
+	@FXML
 	Button openBracket;
 	@FXML
 	Button closedBracket;
@@ -95,7 +99,9 @@ public class KeyPadController implements Initializable
 		sin.setOnAction(value -> {builder.append("sin("); termStringProperty.setValue(builder.toString());});
 		cos.setOnAction(value -> {builder.append("cos("); termStringProperty.setValue(builder.toString());});
 		tan.setOnAction(value -> {builder.append("tan("); termStringProperty.setValue(builder.toString());});
-		
+		log10.setOnAction(value -> {builder.append("lg("); termStringProperty.setValue(builder.toString());});
+		logE.setOnAction(value -> {builder.append("ln("); termStringProperty.setValue(builder.toString());});
+
 		openBracket.setOnAction(value -> {builder.append("("); termStringProperty.setValue(builder.toString());});
 		closedBracket.setOnAction(value -> {builder.append(")"); termStringProperty.setValue(builder.toString());});
 		
@@ -115,6 +121,7 @@ public class KeyPadController implements Initializable
 				t.printStackTrace();
 			}
 		});
+		
 		dot.setOnAction(value -> {builder.append("."); termStringProperty.setValue(builder.toString());});
 	}
 

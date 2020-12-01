@@ -32,24 +32,39 @@ public class TokenBuilder
 					builder.delete(0, builder.length());
 				}
 				
-				if (i+3 < s.length())
+				if (i+2 < s.length())
+				{
+					if (s.substring(i, i+2).equals("ln"))
+					{
+						tmpToken = new Function();
+						tmpToken.setValue("ln");
+						tokenList.add(tmpToken);
+					}
+					else if (s.substring(i, i+2).equals("lg"))
+					{
+						tmpToken = new Function();
+						tmpToken.setValue("lg");
+						tokenList.add(tmpToken);
+					}
+				}
+				else if (i+3 < s.length())
 				{
 					if (s.substring(i, i+3).equals("sin"))
 					{
 						tmpToken = new Function();
-						tmpToken.setValue(String.valueOf("sin"));
+						tmpToken.setValue("sin");
 						tokenList.add(tmpToken);
 					}
 					else if (s.substring(i, i+3).equals("cos"))
 					{
 						tmpToken = new Function();
-						tmpToken.setValue(String.valueOf("cos"));
+						tmpToken.setValue("cos");
 						tokenList.add(tmpToken);
 					}
 					else if (s.substring(i, i+3).equals("tan"))
 					{
 						tmpToken = new Function();
-						tmpToken.setValue(String.valueOf("tan"));
+						tmpToken.setValue("tan");
 						tokenList.add(tmpToken);
 					}
 				}
