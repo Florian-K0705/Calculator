@@ -12,6 +12,7 @@ public class ShuntingYardConverter
 	
 	public ShuntingYardConverter(List<Token> tokenList) throws Exception
 	{
+		
 		Stack<Token> stack = new Stack<>();
 		
 		for (Token t : tokenList)

@@ -10,7 +10,7 @@ public class TokenBuilder
 	public TokenBuilder(String s)
 	{
 		StringBuilder builder = new StringBuilder();
-		Token tmpToken;
+		Token tmpToken = null;
 		char tmp;
 		
 		for (int i=0; i<s.length(); i++)
@@ -47,7 +47,8 @@ public class TokenBuilder
 						tokenList.add(tmpToken);
 					}
 				}
-				else if (i+3 < s.length())
+				
+				if (i+3 < s.length())
 				{
 					if (s.substring(i, i+3).equals("sin"))
 					{
@@ -118,6 +119,7 @@ public class TokenBuilder
 					tokenList.add(tmpToken);
 				}
 			}
+			
 		}
 		
 		if (builder.length() > 0)
